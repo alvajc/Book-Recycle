@@ -1,0 +1,26 @@
+{
+  "name": "book-recycle",
+  "version": "1.0.0",
+  "description": "A site where users can buy used books.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvajc/Book-Recycle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvajc/Book-Recycle/issues"
+  },
+  "homepage": "https://github.com/alvajc/Book-Recycle#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "gulp": "^3.9.0",
+    "mongoose": "^4.3.7",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  }
+}
