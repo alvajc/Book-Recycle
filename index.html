@@ -2,94 +2,103 @@
 <html>
 <head>
   <title>Book Recycle</title>
-  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/default.css">
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <a id="brand" class="navbar-brand" href="#">Book Recycle</a>
+      </div>
+    </nav>
     <div class="container">
-      <a id="brand" class="navbar-brand" href="#">Book Recycle</a>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row no-gutters">
-      <div class="col-md-3">
-        <img class="img-responsive" src="images/bookCoffee.jpg">
-        <img class="img-responsive" src="images/booksEdge.png">
-      </div>
-      <div class="col-md-6">
-        <img class="img-responsive" src="images/books.jpg">
-      </div>
-      <div class="col-md-3">
-        <img class="img-responsive" src="images/openBooks.jpg">
-        <img class="img-responsive" src="images/booksEdge.png">
-      </div>
-    </div>
-  </div>
-  <div class="container"
-      <div class="row">
-        <div class="col-md-12">
-          <button id="signform" type="button" class="center-block btn btn-primary" data-toggle="modal" data-target="#signModal">Check Out</button>
-          <div class="modal fade" id="signModal">
-          <div class="modal-dialog" role="document">
-          <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Enter Information</h4>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="name" class="form-control" id="name" placeholder="Name">
-              </div>
-              <div class="for=group">
-                <label for="Address">Address</label>
-                <input type="address" class="form-control" id="address" placeholder="Address">
-              </div>
-              <div class="form-group">
-                <label for="city">City</label>
-                <input type="city" class="form-control" id="city" placeholder="City">
-              </div>
-              <div class="form-group">
-                <label for="state">State</label>
-                <select class="form-control" id="state">
-                  <option>AZ</option>
-                  <option>CA</option>
-                  <option>OR</option>
-                  <option>TN</option>
-                  <option>WA</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="zipcode">Zip Code</label>
-                <input type="zipcode" class="form-control" id="zipcode" placeholder="Zip Code">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="zipcode" class="form-control" id="zipcode" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="zipcode" class="form-control" id="zipcode" placeholder="Password">
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+      <div class="row no-gutters">
+        <div class="col-md-3">
+          <img class="img-responsive" src="images/bookCoffee.jpg">
+          <img class="img-responsive" src="images/booksEdge.png">
+        </div>
+        <div class="col-md-6">
+          <img class="img-responsive" src="images/books.jpg">
+        </div>
+        <div class="col-md-3">
+          <img class="img-responsive" src="images/openBooks.jpg">
+          <img class="img-responsive" src="images/booksEdge.png">
         </div>
       </div>
     </div>
-  
-
-
+    <div class="container">
+        <form action="" id="registration-form">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="name">Name</label>
+              <input data-validation="alphanumeric" type="name" class="form-control" id="name" placeholder="Name" >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="Address">Address</label>
+              <input type="address" class="form-control" id="address" placeholder="Address">
+            </div>
+         </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="city">City</label>
+              <input type="city" class="form-control" id="city" placeholder="City">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-1 form-group">
+              <label for="state">State</label>
+              <input type="text" class="form-control" data-validation="federatestate">
+            </div>
+            <div class="col-md-2 form-group">
+              <label for="zipcode">Zip Code</label>
+              <input type="zipcode" class="form-control" id="zipcode" placeholder="Zip Code" data-validation="length" data-validation-length="5">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="email">Email</label>
+              <input data-validation="email" type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 panel panel-default">
+              <div class="panel-body">
+                Credit Card Information
+                <i class="fa fa-cc-visa fa-2x"></i>
+                <i class="fa fa-cc-mastercard fa-2x"></i>
+                <i class="fa fa-cc-amex fa-2x"></i>
+                <i class="fa fa-cc-discover fa-2x"></i>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2 form-group">
+              <select name="credit-card" class="form-control" id="credit-card">
+                <option value="visa">VISA</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="amex">American express</option>
+                <option value="discover">Discover</option>
+              </select>
+            </div>
+            <div class="col-md-4 form-group">
+              <input type="text" class="form-control" placeholder="Enter Credit Card Number" name="creditcard_num" data-validation="creditcard" data-validation-allowing="visa">
+            </div>
+          </div>
+        </form>
+      </div>
+    <div class="container"
+      <div class="row">
+        <div class="col-md-12">
+          <button id="signform" type="button" class="center-block btn btn-primary" data-toggle="modal" data-target="#signModal">Check Out</button>
+      </div>
+    </div>
+  </div>
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.8/jquery.form-validator.min.js"></script>
   <script src="js/default.js"></script>
-</body>
-
-
-
+  </body>
 </html>
