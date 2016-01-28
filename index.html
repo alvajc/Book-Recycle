@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Recycle</title>
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <a id="brand" class="navbar-brand" href="#">Book Recycle</a>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-md-3">
+        <img class="img-responsive" src="images/bookCoffee.jpg">
+        <img class="img-responsive" src="images/booksEdge.png">
+      </div>
+      <div class="col-md-6">
+        <img class="img-responsive" src="images/books.jpg">
+      </div>
+      <div class="col-md-3">
+        <img class="img-responsive" src="images/openBooks.jpg">
+        <img class="img-responsive" src="images/booksEdge.png">
+      </div>
+    </div>
+  </div>
+  <div class="container"
+      <div class="row">
+        <div class="col-md-12">
+          <button id="signform" type="button" class="center-block btn btn-primary" data-toggle="modal" data-target="#signModal">Check Out</button>
+          <div class="modal fade" id="signModal">
+          <div class="modal-dialog" role="document">
+          <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Enter Information</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="name" class="form-control" id="name" placeholder="Name">
+              </div>
+              <div class="for=group">
+                <label for="Address">Address</label>
+                <input type="address" class="form-control" id="address" placeholder="Address">
+              </div>
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="city" class="form-control" id="city" placeholder="City">
+              </div>
+              <div class="form-group">
+                <label for="state">State</label>
+                <select class="form-control" id="state">
+                  <option>AZ</option>
+                  <option>CA</option>
+                  <option>OR</option>
+                  <option>TN</option>
+                  <option>WA</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="zipcode">Zip Code</label>
+                <input type="zipcode" class="form-control" id="zipcode" placeholder="Zip Code">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="zipcode" class="form-control" id="zipcode" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="zipcode" class="form-control" id="zipcode" placeholder="Password">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+  <script src="js/default.js"></script>
+</body>
+
+
+
+</html>
