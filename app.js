@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.post('/', function(req, res) {
+app.post('/booklist', function(req, res) {
   var book = new bookListing();
   book.firstname = req.body.firstname;
   book.lastname = req.body.lastname;
@@ -23,6 +23,17 @@ app.post('/', function(req, res) {
       res.send(err);
     } else {
       res.json({ message: 'Book listed', data: book });
+    }
+  });
+});
+
+app.post('/booksearch', function(req, res) {
+  bookListing.find({ bookname: req.body.bookNameSearch },
+  function(err, docs) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.json(docs);
     }
   });
 });

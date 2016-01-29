@@ -97,7 +97,7 @@
     </div>
   </div>
   <div class="container">
-    <form action="/" method="post">
+    <form action="/booklist" method="post">
       <div class="row">
         <div class="col-md-6 form-group">
           <label for="firstName">First Name</label>
@@ -143,6 +143,22 @@
       <div class="row">
         <div class="col-md-6">
           <button id="submitList" type="submit" class="center-block btn btn-primary">List Book</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="container">
+    <form action="/booksearch" method="post">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="bookName">Book Name</label>
+          <input type="text" name="bookNameSearch" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <button id="submitSearch" type="submit" class="center-block btn btn-primary">Search Books</button>
+        </div>
       </div>
     </form>
   </div>
