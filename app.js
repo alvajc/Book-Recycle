@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var router = express.Router();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var bookListing = require("./js/bookListing.js");
@@ -7,12 +8,9 @@ var bookListing = require("./js/bookListing.js");
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-app.use(express.static('./'));
 
-var bookListing = app.route('/bookListing');
-
-bookListing.post(function(req, res) {
-  var book = new Book();
+app.post('/', function(req, res) {
+  var book = new bookListing();
   book.firstname = req.body.firstname;
   book.lastname = req.body.lastname;
   book.email = req.body.email;
@@ -20,8 +18,15 @@ bookListing.post(function(req, res) {
   book.bookname = req.body.bookname;
   book.bookauthor = req.body.bookauthor;
   book.sellprice = req.body.sellprice;
-  book.save();
+  book.save(function(err) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.json({ message: 'Book listed', data: book });
+    }
+  });
 });
 
+app.use(express.static('./'));
 app.listen(1337);
 console.log('listening on localhost:1337');
