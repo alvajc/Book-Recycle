@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/books', function() {
-  console.log('connected to mongo books collection');
+mongoose.connect('mongodb://localhost/BookRecycle', function() {
+  console.log('connected to mongo Book Recycle collection');
 });
 
 var Schema = mongoose.Schema;
