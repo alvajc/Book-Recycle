@@ -1,13 +1,17 @@
 var express = require('express');
 var app = express();
+var jade = require('jade');
 var router = express.Router();
 var bodyParser = require('body-parser');
+var jsonParser = bodyParser.json();
 var mongoose = require('mongoose');
 var bookListing = require("./js/bookListing.js");
 
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+app.set('views', '/app/views');
+app.set('view engine', '.jade');
 
 app.post('/booklist', function(req, res) {
   var book = new bookListing();
@@ -27,16 +31,16 @@ app.post('/booklist', function(req, res) {
   });
 });
 
-app.post('/booksearch', function(req, res) {
-  bookListing.find({ bookname: req.body.bookNameSearch },
-  function(err, docs) {
-    if (err) {
-      res.send(err);
-    } else {
-      res.json(docs);
-    }
+app.get('/booksearch', function(req, res) {
+  bookListing.find({ $text: { $search: req.query.bookNameSearch }},
+  function(err, bookListings) {
+    availableBooks = bookListings;
+    res.json(availableBooks);
+    console.log(bookListing);
   });
 });
+
+app.use('/booksearch', jsonParser, bookListing);
 
 app.use(express.static('./'));
 app.listen(1337);
