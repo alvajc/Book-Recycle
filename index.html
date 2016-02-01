@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Book Recycle</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/default.css">
@@ -12,18 +13,17 @@
         <a id="brand" class="navbar-brand" href="#">Book Recycle</a>
       </div>
     </nav>
-    <div class="container">
-      <div class="row no-gutters">
-        <div class="col-md-3">
-          <img class="img-responsive" src="images/bookCoffee.jpg">
-          <img class="img-responsive" src="images/booksEdge.png">
-        </div>
-        <div class="col-md-6">
-          <img class="img-responsive" src="images/books.jpg">
-        </div>
-        <div class="col-md-3">
-          <img class="img-responsive" src="images/openBooks.jpg">
-          <img class="img-responsive" src="images/booksEdge.png">
+    <div class="jumbotron jumboMain">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p id="mainTitle">Book Recycle</p>
+          </div>
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <h2 id="mainFeature">Buy and Sell Used Books</h2>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -113,7 +113,7 @@
       <div class="row">
         <div class="col-md-6 form-group">
           <label for="email">Email</label>
-          <input type="text" name="email" class="form-control">
+          <input type="text" name="email" class="form-control" data-validation="email">
         </div>
       </div>
       <div class="row">
@@ -137,7 +137,7 @@
       <div class="row">
         <div class="col-md-2 form-group">
           <label for="sellPrice">Sell Price</label>
-          <input type="text" name="sellprice" class="form-control">
+          <input type="text" data-validation="number" data-validation-allowing="float" name="sellprice" class="form-control">
         </div>
       </div>
       <div class="row">
@@ -148,7 +148,7 @@
     </form>
   </div>
   <div class="container">
-    <form action="/booksearch" method="post">
+    <form action="/booksearch" method="get">
       <div class="row">
         <div class="col-md-6">
           <label for="bookName">Book Name</label>
