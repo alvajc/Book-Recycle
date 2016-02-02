@@ -19,6 +19,6 @@ $.validate({
   }
 });
 
-$("#mainTitle").hide().fadeIn(3200);
+$("#mainTitle").hide().slideDown(3200);
 
 $("#mainFeature").hide().fadeIn(4500);
