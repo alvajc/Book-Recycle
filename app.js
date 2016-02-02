@@ -37,7 +37,7 @@ app.get('/booksearch', function(req, res) {
       bookname: availableBooks[0].bookname,
       bookauthor: availableBooks[0].bookauthor,
       sellprice: availableBooks[0].sellprice
-    }
+    };
     res.send(bookForSale);
     console.log(bookForSale);
   });
