@@ -20,3 +20,22 @@ body {
   font-size: 75px;
   font-family: 'Open Sans', sans-serif;
 }
+
+#submitSearch {
+  margin-top: 20px;
+}
+
+#mountainBooks {
+  width: 900px;
+  height: 400px;
+}
+
+.feature {
+  margin-top: -30px;
+  height: 500px;
+  background-color: black;
+}
+
+.featureText {
+  color: red;
+}

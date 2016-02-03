@@ -28,7 +28,92 @@
         </div>
       </div>
     </div>
+    <div class="jumbotron feature">
+      <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <img id="mountainBooks" class="img-responsive" src="images/mountainBooks.jpg">
+        </div>
+        <div class="col-md-4">
+          <h1 id="featureText" class="text-center">HAVE A MOUNTAIN A BOOKS??</h1>
+        </div>
+      </div>
+    </div>
+    </div>
+    
     <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center">
+          <h2>LIST YOUR USED BOOKS FOR SALE</h2>
+        </div>
+      </div>
+    <form action="/booklist" method="post">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-2 form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" data-validation="required" data-validation"alphanumeric" data-validation-help="Enter First Name" name="firstname" class="form-control">
+        </div>
+        <div class="col-md-4 form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" name="lastname" data-validation="required" data-validation"alphanumeric" data-validation-help="Enter Last Name" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-2 form-group">
+          <label for="email">Email</label>
+          <input type="text" data-validation="required" data-validation="email" data-validation-help="Enter email address" name="email" class="form-control" data-validation="email">
+        </div>
+        <div class="col-md-4 form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" data-validation="required" data-validation-help="Enter phone number" name="phone" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-2 form-group">
+          <label for="bookName">Book Name</label>
+          <input type="text" data-validation="required" data-validation-help="Enter Book Name" name="bookname" class="form-control">
+        </div>
+        <div class="col-md-4 form-group">
+          <label for="bookAuthor">Book Author</label>
+          <input type="text" data-validation="required" data-validation-help="Enter Authhor Name" name="bookauthor" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 form-group">
+          <label for="sellPrice">Sell Price</label>
+          <input type="text" data-validation="number" data-validation-allowing="float" data-validation-help="Enter Sell Price" name="sellprice" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <button id="submitList" type="submit" class="center-block btn btn-primary">List Book</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="container">
+    <form>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <label for="bookName">Book Name</label>
+          <input type="text" id="bookNameSearch" name="bookNameSearch" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <button id="submitSearch" type="button" class="center-block btn btn-primary">Search Books</button>
+        </div>
+      </div> 
+    </form>
+      </div class="row">
+        </div class="col-md-6 col-md-offset-3">
+          <h2 id="bookNameResult" class="text-center"></h2>
+          <h2 id="bookAuthorResult" class="text-center"></h2>
+          <h2 id="bookPriceResult" class="text-center"></h2>
+        </div>
+      </div>
+  </div>
+  <div class="container">
         <form action="" id="registration-form">
           <div class="row">
             <div class="col-md-6 form-group">
@@ -90,79 +175,13 @@
           </div>
         </form>
       </div>
-    <div class="container"
-      <div class="row">
-        <div class="col-md-12">
-          <button id="signform" type="button" class="center-block btn btn-primary">Check Out</button>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <form action="/booklist" method="post">
-      <div class="row">
-        <div class="col-md-6 form-group">
-          <label for="firstName">First Name</label>
-          <input type="text" data-validation="required" data-validation"alphanumeric" data-validation-help="Enter First Name" name="firstname" class="form-control">
+      <div class="container"
+        <div class="row">
+          <div class="col-md-12">
+            <button id="signform" type="button" class="center-block btn btn-primary">Check Out</button>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6 form-group">
-          <label for="lastName">Last Name</label>
-          <input type="text" name="lastname" data-validation="required" data-validation"alphanumeric" data-validation-help="Enter Last Name" class="form-control">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 form-group">
-          <label for="email">Email</label>
-          <input type="text" data-validation="required" data-validation="email" data-validation-help="Enter email address" name="email" class="form-control" data-validation="email">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 form-group">
-          <label for="phone">Phone Number</label>
-          <input type="text" data-validation="required" data-validation-help="Enter phone number" name="phone" class="form-control">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 form-group">
-          <label for="bookName">Book Name</label>
-          <input type="text" data-validation="required" data-validation-help="Enter Book Name" name="bookname" class="form-control">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 form-group">
-          <label for="bookAuthor">Book Author</label>
-          <input type="text" data-validation="required" data-validation-help="Enter Authhor Name" name="bookauthor" class="form-control">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-2 form-group">
-          <label for="sellPrice">Sell Price</label>
-          <input type="text" data-validation="number" data-validation-allowing="float" data-validation-help="Enter Sell Price" name="sellprice" class="form-control">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <button id="submitList" type="submit" class="center-block btn btn-primary">List Book</button>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="container">
-    <form action="/booksearch" method="get">
-      <div class="row">
-        <div class="col-md-6">
-          <label for="bookName">Book Name</label>
-          <input type="text" name="bookNameSearch" class="form-control">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <button id="submitSearch" type="submit" class="center-block btn btn-primary">Search Books</button>
-        </div>
-      </div>
-    </form>
-  </div>
   <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.8/jquery.form-validator.min.js"></script>
