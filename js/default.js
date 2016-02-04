@@ -30,6 +30,12 @@ $(document).ready(function() {
     $("#listBookDiv").slideDown(400);
   });
 });
+$("#searchResultDiv").hide();
+$(document).ready(function() {
+  $("#submitSearch").click(function() {
+    $("#searchResultDiv").slideDown(700);
+  });
+});
 
 
 // XMLHttpRequest to search books on MongoDB -----
