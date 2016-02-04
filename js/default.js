@@ -23,7 +23,14 @@ $.validate({
 // Main Jumbotron Animation ------------
 $("#mainTitle").hide().fadeIn(3200);
 $("#mainFeature").hide().fadeIn(4500);
-$("#arrow").hide().fadeIn(5000);
+$("#arrow").hide().fadeIn(5500);
+$("#listBookDiv").hide();
+$(document).ready(function() {
+  $("#listBookButton").click(function() {
+    $("#listBookDiv").slideDown(400);
+  });
+});
+
 
 // XMLHttpRequest to search books on MongoDB -----
 var search = document.getElementById('submitSearch');
@@ -36,10 +43,12 @@ search.addEventListener('click', function(book) {
       bookNameResult.textContent = bookSearch[0].bookname;
       bookAuthorResult.textContent = bookSearch[0].bookauthor;
       bookPriceResult.textContent = bookSearch[0].sellprice;
+      var search = document.getElementById('searchResultDiv');
+      search.setAttribute('class', 'show');
     }
   };
   var bookName = document.getElementById('bookNameSearch').value;
   xhr.open('POST', '/booksearch', true);
   xhr.send(bookName);
+  console.log(bookName);
 }, false);
-
