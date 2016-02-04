@@ -2,23 +2,47 @@ body {
   padding-top: 51px;
 }
 
+@media screen and (min-width: 468px) {
+   #mainTitle {
+    font-size: 180px
+   }
+}
+
+
 .jumboMain {
   background-image: url(../images/library.jpg);
   background-size: cover;
   height: 1100px;
 }
 
+#brand {
+  color: white;
+}
+
+#buyButton {
+  margin-right: 50px;
+}
+
 #mainTitle {
   color: white;
-  font-size: 180px;
-  font-family: 'Open Sans', sans-serif;
   margin-top: 75px;
+}
+
+.feature {
+  background-image: url(../images/mountainBooks.jpg);
+  background-size: cover;
+  height: 650px;
+  margin-top: -30px;
+}
+
+.featureTwo {
+  background-color: #383838;
+  height: 600px;
+  margin-top: -30px;
 }
 
 #mainFeature {
   color: white;
-  font-size: 75px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 #submitSearch {
@@ -30,12 +54,36 @@ body {
   height: 400px;
 }
 
-.feature {
-  margin-top: -30px;
-  height: 500px;
-  background-color: black;
+#featureText {
+  color: white;
+  margin-top: 230px;
 }
 
-.featureText {
-  color: red;
+#openBook {
+  width: 600px;
+  height: 200px;
+}
+
+#featureTextTwo {
+  color: white;
+  margin-top: 65px;
+}
+
+#carryBooks {
+  margin-top: 65px;
+}
+
+.featureThree {
+  background-image: url(../images/booksStacked.jpg);
+  background-size: cover;
+  height: 650px;
+  margin-top: -30px;
+}
+
+#featureTextThree {
+  color: white;
+}
+
+.featureThreeText {
+  color: white;
 }

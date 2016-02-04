@@ -21,8 +21,9 @@ $.validate({
 });
 
 // Main Jumbotron Animation ------------
-$("#mainTitle").hide().slideDown(3200);
+$("#mainTitle").hide().fadeIn(3200);
 $("#mainFeature").hide().fadeIn(4500);
+$("#arrow").hide().fadeIn(5000);
 
 // XMLHttpRequest to search books on MongoDB -----
 var search = document.getElementById('submitSearch');
