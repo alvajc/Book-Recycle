@@ -103,6 +103,10 @@ body {
   color: white;
 }
 
+#listBookDiv {
+  margin-bottom: 50px;
+}
+
 #listBookButton {
   background-color: #383838;
   color: white;
@@ -110,7 +114,5 @@ body {
   margin-top: 100px;
 }
 
-#listBookDiv {
-  margin-bottom: 50px;
-}
+
 
