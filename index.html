@@ -13,8 +13,6 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <a id="brand" class="navbar-brand" href="#">Book Recycle</a>
-        <button type="button" id="sellButton" class="btn btn-default navbar-btn pull-right">Sell Book</button>
-        <button type="button" id="buyButton" class="btn btn-default navbar-btn pull-right">Buy Book</button>
       </div>
     </nav>
     <div class="jumbotron jumboMain">
@@ -23,39 +21,38 @@
           <div class="col-md-12 text-center">
             <h1 id="mainTitle">Book Recycle</h1>
           </div>
-          <div class="row">
-            <div class="col-md-10 col-md-offset-1 text-center">
+        </div>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
               <h1 id="mainFeature">Buy and Sell Used Books</h1>
-            </div>
-          </div>
-          <div class="row">
-           <div class="col-md-8 col-md-offset-2">
-            <form>
-            <div id="searchDiv" class="input-group input-group-lg">
-             <input type="text" id="bookNameSearch" name="bookNameSearch" class="form-control text-center" placeholder="SEARCH USED BOOKS FOR SALE">
-              <span class="input-group-btn">
-                <button type="button" id="submitSearch" class="btn btn-default">Go!</button>
-              </span>
-            </div>
-          </form>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <form>
+              <div id="searchDiv" class="input-group input-group-lg">
+               <input type="text" id="bookNameSearch" name="bookNameSearch" class="form-control text-center" placeholder="SEARCH USED BOOKS FOR SALE">
+                <span class="input-group-btn">
+                  <button type="button" id="submitSearch" class="btn btn-default">Go!</button>
+                </span>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-    <div id="searchResultDiv">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3">
-                <h2 id="bookNameResult" class="text-center"></h2>
-                <h2 id="bookAuthorResult" class="text-center"></h2>
-                <h2 id="bookPriceResult" class="text-center"></h2>
-              </div>
-            </div>
-          </div>
+    <div id="jumboSearchResult" class="jumbotron">
+      <div class="container-fluid">
+        <div id="searchResultDiv" class="row">
         </div>
+      </div>
+    </div>
     <div class="jumbotron" id="mountainText">
-      <h1 id="featureText" class="text-center">HAVE A MOUNTAIN A BOOKS??</h1>
+      <div class="container">
+        <div class="row">
+          <h1 id="featureText" class="text-center">HAVE A MOUNTAIN A BOOKS??</h1>
+        </div>
+      </div>
     </div>
     <div class="jumbotron feature" >
     </div>
@@ -72,7 +69,6 @@
       </div>
     </div>
     <div id="listBookDiv">
-      <div
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center">

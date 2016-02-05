@@ -8,7 +8,6 @@ body {
    }
 }
 
-
 .jumboMain {
   background-image: url(../images/library.jpg);
   background-size: cover;
@@ -23,11 +22,6 @@ body {
   margin-top: 300px;
 }
 
-#searchResultDiv {
-  height: 400px;
-
-}
-
 #submitSearch {
   background-color: #383838;
   color: white;
@@ -40,6 +34,10 @@ body {
 #mainTitle {
   color: white;
   margin-top: 75px;
+}
+
+#jumboSearchResult {
+  background-color: white;
 }
 
 #mountainText {

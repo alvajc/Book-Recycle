@@ -31,10 +31,10 @@ $(document).ready(function() {
   });
 });
 
-$("#searchResultDiv").hide();
+$("#jumboSearchResult").hide();
 $(document).ready(function() {
   $("#submitSearch").click(function() {
-    $("#searchResultDiv").slideDown(700);
+    $("#jumboSearchResult").slideDown(700);
   });
 });
 
@@ -46,13 +46,28 @@ search.addEventListener('click', function(book) {
     if(xhr.status === 200) {
       var bookObject = xhr.responseText;
       var bookSearch = JSON.parse(bookObject);
-      bookNameResult.textContent = bookSearch[0].bookname;
-      bookAuthorResult.textContent = bookSearch[0].bookauthor;
-      bookPriceResult.textContent = bookSearch[0].sellprice;
-      var search = document.getElementById('searchResultDiv');
-      search.setAttribute('class', 'show');
+      for (var i = 0; i < bookSearch.length; i++) {
+        var searchResultList = document.getElementById('searchResultDiv');
+        var searchResultColumn = document.createElement('div');
+        searchResultColumn.className = 'col-md-4 col-sm-12 text-center';
+        searchResultList.appendChild(searchResultColumn);
+        var searchName = document.createElement('h4');
+        searchName.textContent = bookSearch[i].bookname;
+        var searchAuthor = document.createElement('h4');
+        searchAuthor.textContent = bookSearch[i].bookauthor;
+        var searchPrice = document.createElement('h4');
+        searchPrice.textContent = bookSearch[i].sellprice;
+        var searchBuy = document.createElement('button');
+        searchBuy.className = 'btn btn-warning';
+        searchBuy.textContent = 'Buy';
+        searchResultColumn.appendChild(searchName);
+        searchResultColumn.appendChild(searchAuthor);
+        searchResultColumn.appendChild(searchPrice);
+        searchResultColumn.appendChild(searchBuy);
+      }
     }
   };
+
   var bookName = document.getElementById('bookNameSearch').value;
   xhr.open('POST', '/booksearch', true);
   xhr.send(bookName);

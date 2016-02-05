@@ -8,6 +8,9 @@ var mongoose = require('mongoose');
 var bookListing = require("./js/bookListing.js");
 
 app.use(bodyParser.text());
+app.use(bodyParser.urlencoded({
+    extended: true
+  }));
 
 app.post('/booklist', function(req, res) {
   var book = new bookListing();
@@ -36,7 +39,7 @@ app.post('/booksearch', function(req, res) {
   });
 });
 
-app.use('/booksearch', bookListing);
+app.use('/booksearch', textParser, bookListing);
 app.use(express.static('./'));
 app.listen(1337);
 console.log('listening on localhost:1337');
