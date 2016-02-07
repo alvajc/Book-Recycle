@@ -41,5 +41,5 @@ app.post('/booksearch', function(req, res) {
 
 app.use('/booksearch', textParser, bookListing);
 app.use(express.static('./'));
-app.listen(1337);
-console.log('listening on localhost:1337');
+var port = process.env.PORT || 3000;
+app.listen(port);

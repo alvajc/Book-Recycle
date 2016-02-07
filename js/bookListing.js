@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/BookRecycle', function() {
+mongoose.connect('mongodb://mongodb://<dbuser>:<dbpassword>@ds059195.mongolab.com:59195/bookrecycle', function() {
   console.log('connected to mongo Book Recycle collection');
 });
 
