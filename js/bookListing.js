@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://alvajc79:0j2c0c4h@ds059155.mongolab.com:59155/heroku_7gh461rv
-', function() {
+mongoose.connect('mongodb://heroku_7gh461rv:ifqh6rf9hmhuidmgcj43se9erl@ds059155.mongolab.com:59155/heroku_7gh461rv', function() {
   console.log('connected to mongo Book Recycle collection');
 });
 
