@@ -46,7 +46,6 @@ search.addEventListener('click', function(book) {
     if(xhr.status === 200) {
       var bookObject = xhr.responseText;
       var bookSearch = JSON.parse(bookObject);
-      console.log(bookObject);
       for (var i = 0; i < bookSearch.length; i++) {
         var searchResultList = document.getElementById('searchResultDiv');
         var searchResultColumn = document.createElement('div');
@@ -72,5 +71,4 @@ search.addEventListener('click', function(book) {
   var bookName = document.getElementById('bookNameSearch').value;
   xhr.open('POST', '/booksearch', true);
   xhr.send(bookName);
-  console.log(bookName);
 }, false);

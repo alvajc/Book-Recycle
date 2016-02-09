@@ -9,8 +9,9 @@ var bookListing = require("./js/bookListing.js");
 
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({
-    extended: true
+  extended: true
 }));
+
 
 
 app.post('/booklist', function(req, res) {
@@ -26,21 +27,19 @@ app.post('/booklist', function(req, res) {
     if (err) {
       res.send(err);
     } else {
-      res.json({ message: 'Book listed', data: book });
+      res.send("You're book has been listed. We will notify you when it sells.");
     }
   });
 });
 
 app.post('/booksearch', function(req, res) {
-  bookListing.find({ bookname: req.body.bookNameSearch },
+  bookListing.find({ $text: { $search: req.body }},
   function(err, bookListings) {
-    console.log(req.body.bookNameSearch);
     res.json(bookListings);
-    console.log(bookListings);
   });
 });
 
-app.use('/booksearch', bookListing);
+app.use('/booksearch', textParser, bookListing);
 app.use(express.static('./'));
 var port = process.env.PORT || 3000;
 app.listen(port);
