@@ -8,9 +8,6 @@ var mongoose = require('mongoose');
 var bookListing = require("./js/bookListing.js");
 
 app.use(bodyParser.text());
-app.use(bodyParser.urlencoded({
-    extended: true
-  }));
 
 app.post('/booklist', function(req, res) {
   var book = new bookListing();
@@ -35,11 +32,10 @@ app.post('/booksearch', function(req, res) {
   function(err, bookListings) {
     console.log(req. body);
     res.json(bookListings);
-    console.log(bookListings);
   });
 });
 
-app.use('/booksearch', bodyParser, bookListing);
+app.use('/booksearch', bookListing);
 app.use(express.static('./'));
 var port = process.env.PORT || 3000;
 app.listen(port);
