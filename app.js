@@ -39,7 +39,7 @@ app.post('/booksearch', function(req, res) {
   });
 });
 
-app.use('/booksearch', textParser, bookListing);
+app.use('/booksearch', bodyParser, bookListing);
 app.use(express.static('./'));
 var port = process.env.PORT || 3000;
 app.listen(port);
