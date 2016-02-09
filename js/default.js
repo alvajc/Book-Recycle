@@ -46,24 +46,34 @@ search.addEventListener('click', function(book) {
     if(xhr.status === 200) {
       var bookObject = xhr.responseText;
       var bookSearch = JSON.parse(bookObject);
-      for (var i = 0; i < bookSearch.length; i++) {
-        var searchResultList = document.getElementById('searchResultDiv');
-        var searchResultColumn = document.createElement('div');
-        searchResultColumn.className = 'col-md-4 col-sm-12 text-center';
-        searchResultList.appendChild(searchResultColumn);
-        var searchName = document.createElement('h4');
-        searchName.textContent = bookSearch[i].bookname;
-        var searchAuthor = document.createElement('h4');
-        searchAuthor.textContent = bookSearch[i].bookauthor;
-        var searchPrice = document.createElement('h4');
-        searchPrice.textContent = bookSearch[i].sellprice;
-        var searchBuy = document.createElement('button');
-        searchBuy.className = 'btn btn-warning';
-        searchBuy.textContent = 'Buy';
-        searchResultColumn.appendChild(searchName);
-        searchResultColumn.appendChild(searchAuthor);
-        searchResultColumn.appendChild(searchPrice);
-        searchResultColumn.appendChild(searchBuy);
+      if(bookSearch.length === 0) {
+          var searchResultList = document.getElementById('searchResultDiv');
+          var searchResultColumn = document.createElement('div');
+          searchResultColumn.className = 'col-md-12 text-center';
+          searchResultList.appendChild(searchResultColumn);
+          var searchName = document.createElement('h4');
+          searchName.textContent = "No books found that match your search";
+          searchResultColumn.appendChild(searchName);
+      } else if(bookSearch.length > 0) {
+        for (var i = 0; i < bookSearch.length; i++) {
+          var searchResultList = document.getElementById('searchResultDiv');
+          var searchResultColumn = document.createElement('div');
+          searchResultColumn.className = 'col-md-4 col-sm-12 text-center';
+          searchResultList.appendChild(searchResultColumn);
+          var searchName = document.createElement('h4');
+          searchName.textContent = bookSearch[i].bookname;
+          var searchAuthor = document.createElement('h4');
+          searchAuthor.textContent = bookSearch[i].bookauthor;
+          var searchPrice = document.createElement('h4');
+          searchPrice.textContent = bookSearch[i].sellprice;
+          var searchBuy = document.createElement('button');
+          searchBuy.className = 'btn btn-warning';
+          searchBuy.textContent = 'Buy';
+          searchResultColumn.appendChild(searchName);
+          searchResultColumn.appendChild(searchAuthor);
+          searchResultColumn.appendChild(searchPrice);
+          searchResultColumn.appendChild(searchBuy);
+        }
       }
     }
   };
