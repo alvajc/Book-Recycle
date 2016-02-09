@@ -8,6 +8,10 @@ var mongoose = require('mongoose');
 var bookListing = require("./js/bookListing.js");
 
 app.use(bodyParser.text());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
 
 app.post('/booklist', function(req, res) {
   var book = new bookListing();
