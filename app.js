@@ -28,7 +28,7 @@ app.post('/booklist', function(req, res) {
 });
 
 app.post('/booksearch', function(req, res) {
-  bookListing.find({ $text: { $search: req.body }},
+  bookListing.find({ bookname: req.body },
   function(err, bookListings) {
     console.log(req. body);
     res.json(bookListings);
