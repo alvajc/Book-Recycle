@@ -1,6 +1,10 @@
 {
   "name": "book-recycle",
   "version": "1.0.0",
+  "engines": {
+    "node": "5.4.1",
+    "npm": "3.3.12"
+  }
   "description": "A site where users can buy used books.",
   "main": "app.js",
   "scripts": {
