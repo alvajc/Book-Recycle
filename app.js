@@ -32,6 +32,7 @@ app.post('/booksearch', function(req, res) {
   function(err, bookListings) {
     console.log(req. body);
     res.json(bookListings);
+    console.log(bookListings);
   });
 });
 
